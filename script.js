@@ -165,10 +165,10 @@ function calculateAge(dataNascimento, anoAtual){
     //media de semanas em um ano, não exata;
     let dias = idade * 365
 
-    return `Essa pessoa tem ${idade}, viveu ate o momento, ${meses} meses, ${semanas} semanas e ${dias} dias!!`
+    return `Idade em anos:${idade} anos, Idade em meses:${meses} meses, idade em semanas:${semanas} semanas, idade em dias: ${dias} dias!!`
 }
 
-console.log(calculateAge(1930, 2022))
+console.log(calculateAge(1922, 2022))
 
 //--------------------------
 
