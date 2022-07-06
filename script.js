@@ -22,9 +22,9 @@ function calculateSalary(salario, vendas){
         return comission5 + salario; 
     }
 }
-console.log(calculateSalary(1500, 2000))
+let saldoEmConta = calculateSalary(1500,2000)
 
-
+console.log(saldoEmConta)
 //-----------------------------------
 /* cashMachine()
 Cria uma função que receba um inteiro que representa o valor de um saque em reais (R$).
@@ -43,17 +43,7 @@ O restante do seu salário após o saque.
 Retorne os resultado dos dois calculos em formato de string. Exemplo: Notas sacadas: 2 notas de R$200, 1 nota de R$100, 1 nota de R$50, Saldo Atual: R$500
  */
 
-function cashMachine(salario, vendas, saque){
-
-    let comission3 = vendas * 0.03
-    let comission5 = vendas * 0.05
-
-    if(vendas < 1200){
-        saque = comission3 + salario;
-    }if(vendas > 1200){
-        saque = comission5 + salario; 
-    }
-    console.log('valor do saque :' + saque)
+function cashMachine(saque, saldo){
 
 
 let contador100 = 0;
@@ -63,7 +53,7 @@ let contador10 = 0;
 let contador5 = 0;
 let contador2 = 0;
 let contador1 = 0;
-
+    let resto = saldo - saque
 
 if(saque != 0) {
         for(; saque >= 100;){
@@ -107,10 +97,11 @@ if(saque != 0) {
         Total de notas de 10: ${contador10}
         Total de notas de 5: ${contador5}
         Total de notas de 2: ${contador2}
-        Total de moedas de 1: ${contador1}`
+        Total de moedas de 1: ${contador1}
+        Saldo em conta apos o saque é:${resto}`
 }
 
-console.log(cashMachine(1500, 1500))
+console.log(cashMachine(1500, saldoEmConta))
 
 
 //---------------------------------
